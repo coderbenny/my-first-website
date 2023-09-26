@@ -11,10 +11,10 @@
 <body>
     <!--navigation-->
     <div class="nav">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Projects</a>
-        <a href="">Contact Me</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact Me</a>
     </div>
 
     <!--Home Content-->
@@ -95,24 +95,9 @@
     </div>
 
 
-    <script>
-        const textElement = document.getElementById('typed-text')
-        const textToType = "Benny"
-
-        let index = 0;
-
-        function typeText(){
-            if (index < textToType.length){
-                textElement.textContent += textToType.charAt(index)
-                index++
-                setTimeout(typeText, 100);
-            }
-        }
-
-        window.addEventListener('load', () =>{
-            typeText()
-        })
-    </script>
+    <script><script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="index.js"></script>
+</script>
 
 </body>
 
