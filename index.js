@@ -4,17 +4,17 @@ const textElement = document.getElementById('typed-text')
 const textToType = "Benny"
 let index = 0;
 
-    function typeText(){
-    if (index < textToType.length){
+function typeText() {
+    if (index < textToType.length) {
         textElement.textContent += textToType.charAt(index)
         index++
         setTimeout(typeText, 100);
-        }
-        }
+    }
+}
 
-        window.addEventListener('load', () =>{
-            typeText()
-        })
+window.addEventListener('load', () => {
+    typeText()
+})
 
 
 // //send form data to email
@@ -23,7 +23,7 @@ let index = 0;
 //     event.preventDefault()
 
 //     const formData = new Formdata(event.target)
-    
+
 //     emailjs.sendForm("service_ez9k4qx", "my_template_id", formData).then(function (response)){
 //         console.log("Email sent succesfully:", response)
 //         alert("Thank you, your message has been sent.")
@@ -33,17 +33,17 @@ let index = 0;
 //     }
 // }
 
-function getLinks(){
+function getLinks() {
     const links = document.querySelectorAll('a[href^="#"]');
     return Array.from(links);
 }
 
-function scrollToSection(event){
+function scrollToSection(event) {
     event.preventDefault();
     const targetId = event.target.getAttribute('href').substring(1);
     const targetElement = document.getElementById(targetId);
 
-    if(targetElement){
+    if (targetElement) {
         targetElement.scrollIntoView({
             behavior: 'smooth'
         })
@@ -54,3 +54,11 @@ const links = getLinks();
 links.forEach(link => {
     link.addEventListener('click', scrollToSection);
 })
+
+const linkedIn = document.getElementById('linkedIn');
+
+function writeLinkedInText(){
+    linkedIn.textContent = "LinkedIn"
+};
+
+linkedIn.addEventListener('mouseover', writeLinkedInText);
